@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Projekt 2 - Kalkulator napiwków</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- wrapper z cieniem z częścią górną  -->
+    <main class="wrapper">
+      <div class="top">
+        <h1>BILLSPLITTER</h1>
+        <p class="description">Podziel się rachunkiem ze znajomymi! ;)</p>
+      </div>
+      <div class="bottom">
+        <label for="price">Kwota do zapłaty:</label>
+        <input type="number" min="0" class="options" id="price" />
+
+        <label for="people">Ilość osób</label>
+        <input type="number" class="options" min="0" id="people" />
+
+        <label for="tip">Napiwek</label>
+        <select class="options" id="tip">
+          <option value="0" disabled selected>- wybierz napiwek -</option>
+          <option value="0.05">5%</option>
+          <option value="0.1">10%</option>
+          <option value="0.15">15%</option>
+          <option value="0.2">20%</option>
+        </select>
+
+        <button class="button" id="button">Oblicz</button>
+        <p class="error"></p>
+        <p class="cost-info">
+          Powinniście się złożyć po <span class="cost"></span> zł ;)
+        </p>
+      </div>
+      <!-- <div class="button-area">
+        <button class="button">Oblicz</button>
+      </div> -->
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
